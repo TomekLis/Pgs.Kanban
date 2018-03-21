@@ -4,7 +4,7 @@ export default class Card extends Component {
     render(){
         return(
             <div>
-                Card
+                {this.props.cardName}
             </div>
         )
     }

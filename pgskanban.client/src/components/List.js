@@ -5,9 +5,18 @@ export default class List extends Component {
     render(){
         return(
             <div>
-                List
-                <Card/>
+                {this.props.listName}
+                {this.renderCards()}
+                <button>Add card </button>
             </div>
+        )
+    }
+
+    renderCards = () => {   
+        return (
+            this.props.cards.map(
+                (card) => <Card cardName={card.name} />
+            )
         )
     }
 }
